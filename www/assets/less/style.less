@@ -1,0 +1,115 @@
+/**
+ * STYLE
+ * Main CSS to rule them all
+ * Pages and custom elements style goes here
+ * 
+ * Using
+ * - reset.less 		reset stylesheet
+ * - grid.less 			grid system, including mixins
+ * - colors.less 		variables for colorscheme
+ * - layout.less 		default style layout for your website
+ * - components.less 	styles and mixins for buttons, form, etc
+ *
+ * Created by @jasonlemay
+ */ 
+
+@import 'reset.less';
+@import 'grid.less';
+@import 'colors.less';
+@import 'layout.less';
+@import 'components.less';
+@import 'functions.less';
+
+
+// -- Styles ---------------------------------------------
+
+.test-gradient{
+	.gradient(@c-primary, @c-primary-light, @c-primary-dark);
+	width: 100%;
+	height: 50px;
+}
+
+.test-dropshadow{
+	.drop-shadow(3px, 3px, 2px, 0.4);
+	background-color: @c-primary;
+	width: 100%;
+	height: 50px;
+}
+
+.test-innershadow{
+	.inner-shadow(3px, 3px, 2px, 0.4);
+	background-color: @c-primary;
+	width: 100%;
+	height: 50px;
+}
+
+.test-rounded{
+	.rounded(10px);
+	background-color: @c-primary;
+	width: 100%;
+	height: 50px;
+}
+
+.test-borderradius{
+	.border-radius(5px, 10px, 20px, 0px);
+	background-color: @c-primary;
+	width: 100%;
+	height: 50px;
+}
+
+.test-opacity{
+	.transition();
+	background-color: @c-primary;
+	width: 100%;
+	height: 50px;
+
+	&:hover{
+		.opacity(0.6);
+	}
+}
+
+.test-rotation{
+	.transition();
+	background-color: @c-primary;
+	width: 100%;
+	height: 50px;
+
+	&:hover{
+		.rotation(5deg);
+	}
+}
+
+.test-scale{
+	.transition();
+	background-color: @c-primary;
+	width: 100%;
+	height: 50px;
+
+	&:hover{
+		.scale(0.8);
+	}
+}
+
+.test-translate{
+	.transition();
+	background-color: @c-primary;
+	width: 100%;
+	height: 50px;
+
+	&:hover{
+		.translate(10px,5px);
+	}
+}
+
+.col-1_6{margin-bottom: 15px;}
+
+
+@media(@mobile) {}
+@media(@tablet) {}
+@media(@tablet-only) {}
+@media(@desktop) {}
+
+
+// -- Print ----------------------------------------------
+
+@import url('print.less');
